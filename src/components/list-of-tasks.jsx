@@ -6,6 +6,9 @@ class ListOfTasks extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {color:['#fad390','#6a89cc','#e55039'],
+
+    }
   }
 
   render() {
@@ -15,10 +18,10 @@ class ListOfTasks extends Component {
           return (
             <>
               <div className='task'>
-                <div className='priority'></div>
+                <div className='priority' style={{backgroundColor:this.state.color[task.priority]}}></div>
                 <div className='task-left-side'>
                   
-                  <input type="checkbox" className='check' id={task.taskName} 
+                  <input checked={task.checkedValue} type="checkbox" className='check' id={task.taskName} 
                     onChange={() => this.props.handleOnChange(index)} />
                     
                     <label 
@@ -28,7 +31,7 @@ class ListOfTasks extends Component {
                     > 
                         {task.taskName}
                     </label>
-
+                    <img src={task.source} alt='source'/>
                     <p className='time'> {task.currentTime} PM</p>
                   
                     

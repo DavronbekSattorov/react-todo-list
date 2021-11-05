@@ -6,6 +6,7 @@ import NewTaskGenerator from "./components/new-task-generator";
 import ListOfTasks from "./components/list-of-tasks";
 import Header from "./components/Header";
 import EditTask from "./components/EditTask";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends Component {
@@ -21,10 +22,10 @@ class App extends Component {
     }
 
   //Update Class
-    updateListOfTasks = (newTask, time) => {
+    updateListOfTasks = (newTask, priority, source) => {
       
-      if(!(newTask === 'hello')) {
-        this.setState({ listOfTasks: [...this.state.listOfTasks,{ taskName: newTask, checkedValue: false, key: Math.random() * 1000, currentTime: this.getCurrentTime()}]});
+      if(!(newTask === '')) {
+        this.setState({ listOfTasks: [...this.state.listOfTasks,{ taskName: newTask, checkedValue: false, key: Math.random() * 1000, currentTime: this.getCurrentTime(), priority, source}]});
       }
       //this.setState({listOfTasks:[...this.state.listOfTasks,...filtered]})
     };
