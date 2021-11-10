@@ -1,0 +1,301 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.my-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.contain {
+  width: 380px;
+  height: 600px;
+  border: 1px solid #ecf0f1;
+  border-radius: 10px;
+  z-index: 1;
+
+}
+
+/* HEADER*/
+header {
+  height: 100px;
+  background-color: #f3fafb;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 1px solid #bdc3c7;
+  display: flex;
+  position: relative;
+
+}
+
+.date {
+  width: 60%;
+  padding-left: 20px;
+  padding-top: 20px;
+
+}
+
+.date h1 {
+  font-size: 24px;
+  color: #3498db;
+  font-weight:normal;
+
+}
+
+.date p {
+  font-size: 15px;
+  color: #95a5a6;
+}
+.amountTask {
+  width: 35%;
+
+}
+
+.amountTask p {
+  font-size: 14px;
+  color: #95a5a6;
+  padding-top: 30px;
+  padding-left: 50px;
+}
+
+.buttonAdd {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #dd5a4b;
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.buttonAdd:hover {
+  background-color: #f13722;
+}
+.buttonAdd p {
+  transform: translate(0, 9%);
+}
+
+/* New Task Generator */
+.getTask {
+  width: 350px;
+  height: 140px;
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  box-shadow: 0px 0px 3px 3px #acaaaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: move;
+  z-index: 10;
+  
+}
+
+.getInputFromUser {
+  width: 60%;
+  height: 32px;
+  margin-right: 10px;
+  padding: 3px;
+  padding-left: 13px;
+  border-radius: 15px;
+  border: 1px solid #BCC3C4;
+}
+
+.getInputFromUser:focus {
+  outline: none;
+}
+.addTask {
+  height: 28px;
+  border-radius: 15px;
+  width: 60px;
+  border: 1px solid #BCC3C4;
+  cursor: pointer;
+}
+
+
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #43494b;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+/* List Of Tasks */
+.task {
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #ecf0f1;
+  display: flex;
+  box-sizing: border-box;
+  padding-top: 24px;
+  
+  position: relative;
+}
+.priority {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #e74c3c;
+  width: 1.2%;
+  height: 100%;
+}
+.task-left-side {
+  width: 90%;
+  display: flex;
+}
+
+.check {
+  width: 20%;
+  margin-top: 6px;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+.taskName {
+ width: 60%;
+ color: #57606f;
+ cursor: pointer;
+}
+
+.time {
+  width: 20%;
+  font-size: 12px;
+  padding-top: 5px;
+  color: #747d8c;
+  cursor: pointer;
+  text-align: end;
+}
+
+.hoverImage {
+  clip-path: polygon(0 0, 100% 0%, 100% 75%, 47% 75%, 0 98%, 25% 74%, 0 74%);
+  position: absolute;
+  right: -110px;
+  top: -40px;
+  border: 1px solid #747d8c;
+  display: none;
+}
+
+.task-left-side:hover .hoverImage {
+  display: block;
+  animation: fade_in_show 0.7s
+}
+
+.task-right-side {
+  width: 10%;
+}
+
+.delete {
+  position: absolute;
+  right: 100px;
+  top: 18px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: none;
+
+}
+
+
+
+.task-left-side:hover .delete {
+
+  display: block;
+  animation: fade_in_show 0.7s
+}
+
+
+@keyframes fade_in_show {
+  0% {
+       opacity: 0;
+       transform: scale(0)
+  }
+
+  100% {
+       opacity: 1;
+       transform: scale(1)
+  }
+}
+
+
+.more {
+  width: 100%;
+  color: #57606f;
+  cursor: pointer;
+  position: relative;
+}
+
+.more-popup {
+  width: 80px;
+  position: absolute;
+  right: -72px;
+  top: 45px;
+  border-radius: 5px;
+  display: none;
+  padding: 0;
+
+}
+
+.more-popup p {
+  font-size: 13px;
+  cursor: pointer;
+  padding: 3px;
+  padding-left: 8px;
+  background-color: #dcf4f6;
+}
+
+.edit {
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  margin-bottom: 2px;
+}
+.deletee {
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.undo {
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+}
+
+.edit:hover {
+  background-color: #afe6eb;
+}
+
+.deletee:hover {
+  background-color: #afe6eb;
+}
+
+.undo:hover {
+  background-color: #afe6eb;
+}
+
+.task-right-side:hover .more-popup {
+  display: block;
+}
